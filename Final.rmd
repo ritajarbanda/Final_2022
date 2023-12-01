@@ -139,6 +139,16 @@ barchartGC(~infected + treatment,data=lgbtq, type="percent")
 
 This is a barchart that compares the graphical results of LGBTQs only from the data. It is comparing rates of getting Covid 19 as compared by vaccination status. The left shows individuals who got Covid 19 and the right shows individuals who did not get covid.We can see that more vaccinated individuals got covid while people who did not get covid are very close. 
 
+### Numerical Results
+
+```{r}
+tableLGBTQ <- xtabs(~infected + treatment, data=lgbtq)
+rowPerc(tableLGBTQ)
+colPerc(tableLGBTQ)
+```
+
+The numerical results is telling us that the placebo group who got Covid are about 15% of the time where the vaccinated group got Covid 85% of the time. We can see that the vaccine is not effective in this scenario.
+
 ## Druggies
 
 
