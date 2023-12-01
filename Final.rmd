@@ -51,6 +51,16 @@ The above is a barchart that compares the graphical results of only males collec
 
 We can clearly see that more than twice the percentage of people who are in the placebo group got covid-19 where people who did not get covid are very close. Considering the sample size.
 
+### Numerical Results
+
+```{r}
+tableMale <- xtabs(~infected + treatment, data=male)
+rowPerc(tableMale)
+colPerc(tableMale)
+```
+
+The numerical results is telling us that the placebo group contracted Covid are about 70% of the time where the vaccinated group contracted Covid 30% of the time. We can see that the vaccine is generally effective in this scenario.
+
 ## Females
 
 
