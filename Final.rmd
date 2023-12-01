@@ -105,6 +105,29 @@ colPerc(tableFemale)
 
 The numerical results is telling us that the placebo group who got Covid are about 60% of the time where the vaccinated group got Covid 40% of the time. We can see that the vaccine is effective in this scenario however it was more effective of male participants.
 
+### Inferential Results
+
+```{r}
+chisq.test(tableFemale)
+chisqtestGC(tableFemale)
+femaleFisher <- fisher.test(tableFemale)
+femaleFisher
+```
+
+The Chi Squared test shows that the P-value for the tested data is 0.0002162 which smaller than 0.05. This number indicates that there is a difference in the data. The Chi-Squared statistic is 13.246  which is way larger than our degrees of freedom of 1 in this data. 
+
+### Confidence Interval
+
+```{r}
+oddsFemale = femaleFisher$estimate/(femaleFisher$estimate +1)*100
+print(oddsFemale)
+femaleLow=(femaleFisher$conf.int[1]/(femaleFisher$conf.int[1]+1))*100
+femaleHigh=(femaleFisher$conf.int[2]/(femaleFisher$conf.int[2]+1))*100
+cat("\n","Condifence interval for Females: ",femaleLow," to ",femaleHigh)
+```
+
+We see here that the confidence interval is more than 50% with a normal vaccine approach of a percent that actually includes 60%. The confidence interval shows us that this vaccine is is less effective for females than males. 
+
 ## LGBTQ
 
 
