@@ -217,5 +217,18 @@ cat("\n","Condifence interval for Drug Users: ",drugLow," to ",drugHigh)
 
 We see here that the confidence interval is much lower that 50% with a normal vaccine approach of a percent that that is also much lower than 60%. We can conclude that this vanccine in not good. 
 
-
 # Overall Results and Conclusions
+
+The Covid-19 vaccine was very effective in protecting males against the contraction of the disease.
+The covid-19 vaccine was unsuccessful in protecting females against covid921.
+The covid-19 vaccine was not effective in treating people who identified as LGBTQ. The individuals who identified as LGBTQ and took the vaccine were more likely to get covid-19 than those taking the placebo.
+The individuals that were drug users were ineffectively protected by the vaccine.
+The drug users  that took the vaccine more likely to get covid-19 than those taking the placebo.
+If you are a female, identify as LGBTQ, or a drug user it is not recommended to receive the vaccine. However, if you are a male the vaccine was reported to have been effective.
+The null that there is no difference in taking the vaccine can be accepted to the categories of females, LGBTQ and drug users. The alternative, that the vaccine works and is effective, can be accepted for the males.
+
+For Females, LGBTQ, and Drug user:
+$H_0$ : There are no statistically significant difference in the data, meaning that the vaccine and placebo are equally as effective.
+For Males:
+$H_A$ : There are statistically significant difference in the data, meaning that the vaccine and placebo are NOT equally as effective.
+
