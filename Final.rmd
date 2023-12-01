@@ -193,4 +193,29 @@ colPerc(tableDrug)
 
 The numerical results is telling us that the placebo group who got Covid are about 10% of the time where the vaccinated group got Covid 90% of the time. We can see that the vaccine is not effective in this scenario. We can also say that this group is at a higher risks of getting covid even more than the LGBTQ group.
 
+### Inferential Results
+
+```{r}
+chisq.test(tableDrug)
+chisqtestGC(tableDrug)
+drugFisher <- fisher.test(tableDrug)
+drugFisher
+```
+
+The Chi Squared test shows that the P-value for the tested data is  0.0000000002.32 which smaller than 0.05. This number indicates that there is a difference in the data. The Chi-Squared statistic is 35.2889 which is way larger than our degrees of freedom of 1 in this data.  
+
+
+### Confidence Interval 
+
+```{r}
+oddsDrug = drugFisher$estimate/(drugFisher$estimate +1)*100
+print(oddsDrug)
+drugLow=(drugFisher$conf.int[1]/(drugFisher$conf.int[1]+1))*100
+drugHigh=(drugFisher$conf.int[2]/(drugFisher$conf.int[2]+1))*100
+cat("\n","Condifence interval for Drug Users: ",drugLow," to ",drugHigh)
+```
+
+We see here that the confidence interval is much lower that 50% with a normal vaccine approach of a percent that that is also much lower than 60%. We can conclude that this vanccine in not good. 
+
+
 # Overall Results and Conclusions
