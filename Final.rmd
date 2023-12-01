@@ -40,6 +40,16 @@ Looking at the data collected, this will be categorical explained by categorical
 
 ## Males
 
+### Graphical results
+
+```{r}
+barchartGC(~infected + treatment,data=male)
+barchartGC(~infected + treatment,data=male, type="percent")
+```
+
+The above is a barchart that compares the graphical results of only males collected from the data. It is comparing rates of getting Covid 19 as compared by vaccination status. The left shows people who contracted Covid 19 and the right shows men who did not get the covid.
+
+We can clearly see that more than twice the percentage of people who are in the placebo group got covid-19 where people who did not get covid are very close. Considering the sample size.
 
 ## Females
 
