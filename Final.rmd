@@ -1,6 +1,6 @@
 ---
 title: "Covid91 vaccine study Final2023"
-author: "Put your name here!"
+author: "Rita Jarbanda"
 output: 
   html_document:
     number_sections: true
