@@ -172,7 +172,16 @@ cat("\n","Condifence interval for LGBTQ: ",lgbtqLow," to ",lgbtqHigh)
 
 We see here that the confidence interval is much lower that 50% with a normal vaccine approach of a percent that that is also much lower than 60%. We can conclude that this vanccine in not good.
 
-## Druggies
+## Drug Users
+
+### Graphical results
+
+```{r}
+barchartGC(~infected + treatment,data=drugUser)
+barchartGC(~infected + treatment,data=drugUser, type="percent")
+```
+
+This is a barchart that compares the graphical results of drug users only from the data. It is comparing rates of getting Covid 19 as compared by vaccination status. The left shows individuals who got Covid 19 and the right shows individuals who did not get covid.We can see that more vaccinated individuals got covid while people who did not get covid are very close. 
 
 
 # Overall Results and Conclusions
