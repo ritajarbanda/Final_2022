@@ -95,6 +95,16 @@ barchartGC(~infected + treatment,data=female, type="percent")
 ```
 This is a barchart that compares the graphical results of famales only from the data. It is comparing rates of getting Covid 19 as compared by vaccination status. The left shows females who contracted Covid 19 and the right shows females who did not get covid.We can see that one third more of the percentage of people who are in the placebo group got covid while people who did not contract covid are very close. 
 
+### Numerical Results
+
+```{r}
+tableFemale <- xtabs(~infected + treatment, data=female)
+rowPerc(tableFemale)
+colPerc(tableFemale)
+```
+
+The numerical results is telling us that the placebo group who got Covid are about 60% of the time where the vaccinated group got Covid 40% of the time. We can see that the vaccine is effective in this scenario however it was more effective of male participants.
+
 ## LGBTQ
 
 
